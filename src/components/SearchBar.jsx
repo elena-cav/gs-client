@@ -1,34 +1,37 @@
 import { ReactComponent as Search } from '../images/search-solid.svg';
 import { StyledBar } from '../styled/searchbar';
-
+import { navigate } from '@reach/router';
 import React, { useState } from 'react';
 export default function SearchBar() {
   const [keyword, setKeyword] = useState('');
   const [searchBar, setSearchBar] = useState(false);
 
-  const handleChange = (event) => {
-    console.log(event);
-    // setSearchTerm(event.target.value);
-  };
   const handleKeyPress = (event) => {
-    console.log(event, 'EVENT');
+    console.log(event.key, 'KEY');
+    if (event.key === 'Enter') {
+      handleSubmit(keyword);
+    }
   };
-  const handleSubmit = (event) => {
-    console.log(event, 'EVENT');
+  const handleSubmit = () => {
+    console.log('in here');
+    console.log(keyword, 'KEYWORD');
+    navigate(`/${keyword}`, { state: { keyword } });
   };
   return (
     <StyledBar>
       <Search class="search-icon" onClick={() => setSearchBar((v) => !v)} />
-      <form onSubmit={handleSubmit}>
-        <input
-          key="random1"
-          value={keyword}
-          placeholder={'search country'}
-          onChange={(e) => setKeyword(e.target.value)}
-          onKeyUp={handleKeyPress}
-        />
-        <input type="submit" value="Submit" />
-      </form>
+      {searchBar && (
+        <form onSubmit={handleSubmit}>
+          <input
+            key="random1"
+            value={keyword}
+            placeholder={'search for products'}
+            onChange={(e) => setKeyword(e.target.value)}
+            onKeyUp={handleKeyPress}
+          />
+          <button type="submit">Search</button>
+        </form>
+      )}
     </StyledBar>
   );
 }

@@ -7,7 +7,7 @@ export const StyledChat = styled.div`
     position: fixed;
     bottom: 3rem;
     right: 3rem;
-    z-index: 9;
+    z-index: 800;
     color: #ee9b00;
     cursor: pointer;
     &:hover {

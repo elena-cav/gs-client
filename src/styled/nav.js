@@ -12,8 +12,6 @@ export const StyledNavBar = styled.div`
     }
   }
   .navbar {
-    margin-top: 2rem;
-
     box-sizing: border-box;
     width: 200px;
     position: fixed;

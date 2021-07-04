@@ -3,7 +3,7 @@ export const StyledBanner = styled.div`
   background-color: #e9d8a6;
   height: 5vh;
   position: fixed;
-  z-index: 101;
+  z-index: 1;
   width: 100%;
 
   p {

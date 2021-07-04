@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Faq from 'react-faq-component';
 import { StyledFaq } from '../styled/faq';
 const data = {
@@ -28,17 +28,14 @@ const data = {
 };
 
 const styles = {
-  // bgColor: 'white',
-  titleTextColor: 'blue',
-  rowTitleColor: 'blue'
-  // rowContentColor: 'grey',
-  // arrowColor: "red",
+  titleTextColor: '#005f73',
+  rowTitleColor: '#005f73',
+  arrowColor: '#ae2012'
 };
 
 const config = {
-  // animate: true,
-  // arrowIcon: "V",
-  // tabFocus: true
+  animate: true,
+  tabFocus: true
 };
 
 export default function FaqPage() {

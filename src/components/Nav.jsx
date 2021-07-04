@@ -1,6 +1,5 @@
-import { Link } from '@reach/router';
+// import { Link } from '@reach/router';
 import { StyledNavBar } from '../styled/nav';
-import { ReactComponent as HomeIcon } from '../images/home.svg';
 import { ReactComponent as CloseBtn } from '../images/times-solid.svg';
 import React from 'react';
 

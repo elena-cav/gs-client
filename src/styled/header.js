@@ -13,7 +13,7 @@ export const StyledHeader = styled.div`
   padding: 0 2rem;
   align-items: center;
   z-index: 2;
-  min-height: 3rem;
+  min-height: 6vh;
   margin-top: 4vh;
 
   @media screen and (min-width: 900px) {

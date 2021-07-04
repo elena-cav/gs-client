@@ -7,3 +7,9 @@ export const fetchProducts = () => {
     return data.products;
   });
 };
+
+export const fetchProductsByKeyword = (keyword) => {
+  return request.get(`/products/${keyword}`).then(({ data }) => {
+    return data.products;
+  });
+};

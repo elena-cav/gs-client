@@ -3,29 +3,53 @@ import * as api from '../utils/api';
 import { Ring } from 'react-awesome-spinners';
 import { StyledProducts } from '../styled/productslist';
 import ProductCard from './ProductCard';
+
 class ProductsList extends Component {
-  state = {
-    isLoading: true,
-    products: [],
-    err: null
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoading: true,
+      products: [],
+      err: null,
+      notFound: false
+    };
+  }
+
   componentDidMount() {
-    api
-      .fetchProducts()
-      .then((products) => {
-        this.setState({ products, isLoading: false });
-      })
-      .catch((err) => {
-        this.setState({ err, isLoading: false });
-      });
+    console.log(this.props, 'PROPS');
+    if (this.props.keyword) {
+      api
+        .fetchProductsByKeyword(this.props.keyword)
+        .then((products) => {
+          this.setState({ products, isLoading: false });
+        })
+        .catch((err) => {
+          this.setState({ notFound: true, isLoading: false });
+        });
+    } else
+      api
+        .fetchProducts()
+        .then((products) => {
+          this.setState({ products, isLoading: false });
+        })
+        .catch((err) => {
+          this.setState({ err, isLoading: false });
+        });
   }
 
   render() {
-    const { isLoading, products } = this.state;
+    const { isLoading, products, notFound } = this.state;
     if (isLoading)
       return (
         <div className="ring">
           <Ring />
+        </div>
+      );
+    if (notFound)
+      return (
+        <div>
+          <h2>We're sorry, there are no results matching your search</h2>
         </div>
       );
     return (
@@ -37,7 +61,8 @@ class ProductsList extends Component {
             sales_price,
             discount_percentage,
             colors,
-            brand
+            brand,
+            product_id
           }) => {
             return (
               <ProductCard
@@ -47,6 +72,7 @@ class ProductsList extends Component {
                 discount_percentage={discount_percentage}
                 colors={colors}
                 brand={brand}
+                key={product_id}
               />
             );
           }

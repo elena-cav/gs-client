@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 import { StyledFooter } from '../styled/footer';
 function Footer() {
@@ -10,7 +11,7 @@ function Footer() {
         <li>Delivery & Returns</li>
         <li>Find our store</li>
         <li>
-          <a>FAQ</a>
+          <Link to={'/faq'}>FAQ</Link>
         </li>
       </ul>
       <h4 className="footer-text">

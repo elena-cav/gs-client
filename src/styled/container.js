@@ -11,7 +11,7 @@ export const Container = styled.div`
   margin: 0;
   position: relative;
 
-  @media screen and (min-width: 900px) {
+  /* @media screen and (min-width: 900px) {
     padding-left: 210px;
-  }
+  } */
 `;

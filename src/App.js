@@ -27,6 +27,7 @@ export default class App extends Component {
           <Header openMenu={this.openMenu} />
           <Router>
             <ProductsList path="/" />
+            <ProductsList path="/:keyword" />
             <FaqPage path="/faq" />
           </Router>
           <Chat />

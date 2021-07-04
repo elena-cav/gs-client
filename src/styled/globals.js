@@ -26,7 +26,7 @@ export const Globals = styled.div`
     width: fit-content;
     text-transform: uppercase;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 400;
     padding: 0.4rem;
     align-items: center;
     color: #0a9396;
