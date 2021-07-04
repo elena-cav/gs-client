@@ -13,16 +13,29 @@ export const StyledProduct = styled.div`
     margin: 5px;
   }
 
-  .bookmark {
+  .bookmark-solid {
+    float: right;
+    padding-right: 0.5rem;
+    color: #ee9b00;
     cursor: pointer;
     width: 1rem;
     transition: all 0.2s linear;
-
-    :hover {
-      color: #ae2012;
-    }
-    &--true {
-      color: #ae2012;
-    }
+  }
+  .bookmark {
+    float: right;
+    padding-right: 0.5rem;
+    color: #ee9b00;
+    cursor: pointer;
+    width: 1rem;
+    transition: all 0.2s linear;
+  }
+  .card-text {
+    text-align: left;
+    padding-left: 0.5rem;
+  }
+  h4 {
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
   }
 `;

@@ -38,9 +38,10 @@ export const StyledNavBar = styled.div`
     }
     @media screen and (min-width: 900px) {
       transform: translateX(0);
-      box-shadow: none;
+      box-shadow: 0px 10px 10px -15px #111;
       display: flex;
-      margin-top: 5rem;
+      margin-top: 6.5rem;
+      align-items: center;
       width: 100%;
       flex-direction: row;
       height: 8vh;
@@ -55,7 +56,7 @@ export const StyledNavBar = styled.div`
 
   .nav-items {
     padding: 0;
-    margin: 0 0 3rem 0;
+    /* margin: 0 0 3rem 0; */
 
     svg {
       width: 1em;

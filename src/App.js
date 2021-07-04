@@ -8,6 +8,8 @@ import ProductsList from './components/productsList';
 import Chat from './components/Chat';
 import { Router } from '@reach/router';
 import FaqPage from './components/Faq';
+import ProductPage from './components/ProductPage';
+
 import Banner from './components/Banner';
 
 export default class App extends Component {
@@ -28,6 +30,7 @@ export default class App extends Component {
           <Router>
             <ProductsList path="/" />
             <ProductsList path="/:keyword" />
+            <ProductPage path="/product/:product_id" />
             <FaqPage path="/faq" />
           </Router>
           <Chat />

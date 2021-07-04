@@ -27,12 +27,12 @@ export const StyledChat = styled.div`
     position: fixed;
     bottom: 6rem;
     right: 3rem;
-    z-index: 9;
+    z-index: 999;
     width: 50%;
     border-radius: 0.7rem;
     background-color: white;
     transition: all 0.3s linear;
-    /* padding: 2rem; */
+    overflow: hidden;
   }
   .conversation-box {
     padding: 1rem;

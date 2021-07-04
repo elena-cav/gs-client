@@ -1,10 +1,14 @@
 import { ReactComponent as Search } from '../images/search-solid.svg';
 import { StyledBar } from '../styled/searchbar';
 import { navigate } from '@reach/router';
+import { ReactComponent as CloseBtn } from '../images/times-solid.svg';
+import { CSSTransition } from 'react-transition-group';
 import React, { useState } from 'react';
 export default function SearchBar() {
   const [keyword, setKeyword] = useState('');
   const [searchBar, setSearchBar] = useState(false);
+
+  console.log('sb', searchBar);
 
   const handleKeyPress = (event) => {
     console.log(event.key, 'KEY');
@@ -20,7 +24,7 @@ export default function SearchBar() {
   return (
     <StyledBar>
       <Search class="search-icon" onClick={() => setSearchBar((v) => !v)} />
-      {searchBar && (
+      <CSSTransition timeout={200} in={searchBar} classNames="search-form">
         <form onSubmit={handleSubmit}>
           <input
             key="random1"
@@ -30,8 +34,9 @@ export default function SearchBar() {
             onKeyUp={handleKeyPress}
           />
           <button type="submit">Search</button>
+          <CloseBtn class="close-btn" onClick={() => setSearchBar((v) => !v)} />
         </form>
-      )}
+      </CSSTransition>
     </StyledBar>
   );
 }

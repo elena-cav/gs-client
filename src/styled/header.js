@@ -5,7 +5,7 @@ export const StyledHeader = styled.div`
   background-color: white;
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   top: 0;
   left: 0;
@@ -13,20 +13,21 @@ export const StyledHeader = styled.div`
   padding: 0 2rem;
   align-items: center;
   z-index: 2;
-  min-height: 6vh;
+  min-height: 7vh;
   margin-top: 4vh;
 
   @media screen and (min-width: 900px) {
     box-shadow: none;
     background-color: #eaeaea;
-    padding-left: calc(2rem + 173.11px);
-    z-index: 2;
+    justify-content: center;
   }
 
   h2 {
-    @media screen and (min-width: 900px) {
+    font-weight: 400;
+    /* @media screen and (min-width: 900px) {
       display: flex;
-    }
+
+    } */
 
     a {
       color: inherit;
@@ -43,7 +44,6 @@ export const StyledHeader = styled.div`
     fill: #ee9b00;
     z-index: 2;
     cursor: pointer;
-    justify-content: start;
 
     @media screen and (min-width: 900px) {
       display: none;

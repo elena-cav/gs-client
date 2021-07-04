@@ -5,11 +5,14 @@ export const Globals = styled.div`
   min-height: 100vh;
   font-family: 'Poppins', cursive;
 
-  h1,
-  h2,
+  h1 h2,
   h3 {
+    font-size: 1rem;
     margin: 0;
     color: #005f73;
+  }
+  h1 {
+    font-size: 1.5rem;
   }
 
   h4 {

@@ -73,6 +73,7 @@ class ProductsList extends Component {
                 colors={colors}
                 brand={brand}
                 key={product_id}
+                product_id={product_id}
               />
             );
           }
