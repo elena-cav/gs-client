@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  padding: 9rem 2rem 2rem 2rem;
   flex-grow: 1;
-  padding: 2rem;
   box-sizing: border-box;
   height: auto;
   min-height: 100vh;

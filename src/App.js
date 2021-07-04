@@ -7,6 +7,8 @@ import Header from './components/Header';
 import ProductsList from './components/productsList';
 import Chat from './components/Chat';
 import { Router } from '@reach/router';
+import FaqPage from './components/Faq';
+import Banner from './components/Banner';
 
 export default class App extends Component {
   state = {
@@ -19,11 +21,13 @@ export default class App extends Component {
   render() {
     return (
       <Globals>
+        <Banner />
         <Container>
           <Nav isActive={this.state.isActive} openMenu={this.openMenu} />
           <Header openMenu={this.openMenu} />
           <Router>
             <ProductsList path="/" />
+            <FaqPage path="/faq" />
           </Router>
           <Chat />
         </Container>

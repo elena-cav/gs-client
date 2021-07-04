@@ -4,13 +4,15 @@ import { StyledFooter } from '../styled/footer';
 function Footer() {
   return (
     <StyledFooter>
-      <div className="social-icons">
-        <a
-          href="https://www.linkedin.com/in/elenacavallero"
-          className="social-icon"
-        ></a>
-        <a href="https://github.com/elena-cav" className="social-icon"></a>
-      </div>
+      <div className="info"></div>
+      <ul>
+        <li>Contact us</li>
+        <li>Delivery & Returns</li>
+        <li>Find our store</li>
+        <li>
+          <a>FAQ</a>
+        </li>
+      </ul>
       <h4 className="footer-text">
         COPYRIGHT {new Date().getFullYear()} © Golden Shoe
       </h4>

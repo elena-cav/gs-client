@@ -5,20 +5,22 @@ export const StyledHeader = styled.div`
   background-color: white;
   position: fixed;
   display: flex;
+  justify-content: center;
   width: 100%;
   top: 0;
   left: 0;
-  box-shadow: 0 0 5px #00000044;
-  justify-content: space-between;
+  box-shadow: 0 2px 0 #00000044;
   padding: 0 2rem;
   align-items: center;
   z-index: 2;
   min-height: 3rem;
+  margin-top: 4vh;
 
   @media screen and (min-width: 900px) {
     box-shadow: none;
     background-color: #eaeaea;
     padding-left: calc(2rem + 173.11px);
+    z-index: 2;
   }
 
   h2 {
@@ -28,8 +30,8 @@ export const StyledHeader = styled.div`
 
     a {
       color: inherit;
+
       @media screen and (min-width: 900px) {
-        justify-self: center;
       }
     }
   }
@@ -38,27 +40,13 @@ export const StyledHeader = styled.div`
     top: 2rem;
     left: 1.5rem;
     width: 2rem;
-    fill: #d5573b;
+    fill: #ee9b00;
     z-index: 2;
     cursor: pointer;
+    justify-content: start;
 
     @media screen and (min-width: 900px) {
       display: none;
-    }
-  }
-
-  .loggedin-user {
-    color: #d5573b;
-    display: flex;
-    font-size: 0.9em;
-
-    @media screen and (min-width: 900px) {
-      margin-left: auto;
-    }
-
-    svg {
-      width: 1em;
-      margin-right: 5px;
     }
   }
 `;

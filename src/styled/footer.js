@@ -5,12 +5,19 @@ export const StyledFooter = styled.div`
   padding: 1rem 0 1rem 0;
   display: column;
   justify-content: center;
-  background-color: #eaeaea;
+  background-color: #e9d8a6;
+  width: 100%;
+  z-index: 200;
 
-  @media screen and (min-width: 900px) {
-    padding-left: calc(2rem + 173.11px);
+  h4 {
+    font-size: 0.9rem;
   }
 
+  li {
+    text-align: left;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
   .social-icon svg {
     padding: 0.5rem;
     color: #4f6d7a;

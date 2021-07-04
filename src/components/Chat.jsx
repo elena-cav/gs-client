@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ReactComponent as ChatIcon } from '../images/comments-solid.svg';
 import { StyledChat } from '../styled/chat';
+import { Link } from '@reach/router';
+
 export default function Chat() {
   const [chat, setChat] = useState(false);
   return (
@@ -17,7 +19,9 @@ export default function Chat() {
           <div class="conversation-box">
             <p>We'll be back online on Monday</p>
             <button>Send us a message</button>
-            <h3>Find your answer now</h3>
+            <Link to={'/faq'}>
+              <h3>Find your answer now</h3>
+            </Link>
           </div>
         </div>
       )}

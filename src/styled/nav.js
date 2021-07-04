@@ -2,30 +2,38 @@ import styled from 'styled-components';
 
 export const StyledNavBar = styled.div`
   position: relative;
-
   .nav-close {
-    color: #001219;
+    color: #005f73;
     cursor: pointer;
 
     svg {
-      width: 1.5rem;
-      padding: 0.5rem 2rem;
+      width: 1rem;
+      margin-top: 1rem;
     }
   }
   .navbar {
+    margin-top: 2rem;
+
     box-sizing: border-box;
+    width: 200px;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     background: #fff;
-    z-index: 999;
+    z-index: 100;
     padding: 1rem 0;
     font-size: 1.3rem;
     text-align: left;
+    padding-left: 1rem;
     transform: translateX(-120%);
     transition: transform 0.2s ease-in-out;
     box-shadow: 0 0 7px #00000044;
+    h4 {
+      font-size: 1rem;
+      font-weight: 400;
+      cursor: pointer;
+    }
 
     &--open {
       transform: translateX(0);
@@ -33,6 +41,17 @@ export const StyledNavBar = styled.div`
     @media screen and (min-width: 900px) {
       transform: translateX(0);
       box-shadow: none;
+      display: flex;
+      margin-top: 5rem;
+      width: 100%;
+      flex-direction: row;
+      height: 8vh;
+      justify-content: center;
+      align-items: center;
+      h4 {
+        display: inline;
+        padding: 0 3rem 0 3rem;
+      }
     }
   }
 
@@ -47,7 +66,7 @@ export const StyledNavBar = styled.div`
     }
 
     a {
-      display: block;
+      /* display: block; */
       color: #0a9396;
       text-transform: uppercase;
       padding: 0.5rem 2rem;
@@ -59,17 +78,4 @@ export const StyledNavBar = styled.div`
       display: none;
     }
   }
-
-  .post {
-    font-size: 1rem;
-    box-shadow: 0 0 7px #00000044;
-    margin: 0.5rem 2rem;
-    padding: 0.5rem;
-    text-align: center;
-  }
-
-  /* .post a {
-    color: #4f6d7a;
-    text-transform: uppercase;
-  } */
 `;

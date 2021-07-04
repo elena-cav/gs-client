@@ -42,8 +42,6 @@ export const Globals = styled.div`
   }
   a {
     text-decoration: none;
-    color: #45b69c;
-    font-weight: 600;
   }
   a:hover {
     opacity: 0.8;
