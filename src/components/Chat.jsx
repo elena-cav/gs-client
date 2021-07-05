@@ -13,14 +13,18 @@ export default function Chat() {
       {chat && (
         <div class="chat-box">
           <div class="hello-box">
-            <h3>Hi Elena 👋</h3>
-            <h4>Start a conversation</h4>
+            <h1>Hi Elena 👋</h1>
           </div>
           <div class="conversation-box">
             <p>We'll be back online on Monday</p>
-            <button>Send us a message</button>
+            <div class="chat-inner-box">
+              <h3>Start a conversation</h3>
+
+              <button>Send us a message</button>
+              <p>Our usual reply time is one hour</p>
+            </div>
             <Link to={'/faq'}>
-              <h3>Find your answer now</h3>
+              <h3>Or find your answer now</h3>
             </Link>
           </div>
         </div>

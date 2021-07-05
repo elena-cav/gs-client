@@ -24,14 +24,10 @@ export const StyledHeader = styled.div`
 
   h2 {
     font-weight: 400;
-    /* @media screen and (min-width: 900px) {
-      display: flex;
-
-    } */
+    margin: 0;
 
     a {
       color: inherit;
-
       @media screen and (min-width: 900px) {
       }
     }

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const StyledBar = styled.div`
   display: flex;
   flex-direction: column;
-  position: relative;
+
   form {
     background-color: white;
     height: 12vh;
@@ -34,7 +34,7 @@ export const StyledBar = styled.div`
 
     @media screen and (min-width: 900px) {
       position: absolute;
-      right: 2rem;
+      right: 1rem;
       top: 50%;
       transform: translateY(-50%);
     }
