@@ -65,6 +65,8 @@ export const StyledChat = styled.div`
   }
 
   .chat-inner-box {
+    padding: 1rem;
+
     margin: 0 1rem 0 1rem;
     display: flex;
     flex-direction: column;

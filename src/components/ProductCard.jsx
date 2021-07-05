@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from '@reach/router';
-
 import { StyledProduct } from '../styled/product';
 import { ReactComponent as Bookmark } from '../images/bookmark-regular.svg';
 import { ReactComponent as BookmarkSolid } from '../images/bookmark-solid.svg';
@@ -14,6 +13,7 @@ export default function ProductCard(props) {
     colors,
     product_id
   } = props;
+
   const [bookmark, setBookmark] = useState(false);
   return (
     <StyledProduct>

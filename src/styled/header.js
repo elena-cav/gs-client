@@ -25,7 +25,7 @@ export const StyledHeader = styled.div`
   h2 {
     font-weight: 400;
     margin: 0;
-
+    color: #005f73;
     a {
       color: inherit;
       @media screen and (min-width: 900px) {
