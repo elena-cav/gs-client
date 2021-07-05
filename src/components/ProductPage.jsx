@@ -1,16 +1,28 @@
 import React from 'react';
-import { StyledProductPage } from '../styled/product-page';
+// import { StyledProductPage } from '../styled/product-page';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 export default function ProductPage({ location }) {
   console.log(location.state, 'LOCATIONS');
-  const { image_url } = location.state;
+  const { image_url, product_name } = location.state;
   const handleDragStart = (e) => e.preventDefault();
   const items = [
-    <img src={image_url} onDragStart={handleDragStart} />,
-    <img src={image_url} onDragStart={handleDragStart} />,
-    <img src={image_url} onDragStart={handleDragStart} />
+    <img
+      alt={`${product_name}`}
+      src={image_url}
+      onDragStart={handleDragStart}
+    />,
+    <img
+      alt={`${product_name}`}
+      src={image_url}
+      onDragStart={handleDragStart}
+    />,
+    <img
+      alt={`${product_name}`}
+      src={image_url}
+      onDragStart={handleDragStart}
+    />
   ];
   return (
     // <StyledProductPage>
