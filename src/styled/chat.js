@@ -5,12 +5,14 @@ export const StyledChat = styled.div`
   h1 {
     color: white;
     font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0;
   }
 
   a {
     position: relative;
     display: inline-block;
-    font-size: 2em;
+    font-size: 1rem;
     font-weight: 800;
     color: #0a9396;
     overflow: hidden;
@@ -48,12 +50,12 @@ export const StyledChat = styled.div`
   }
   .chat-box {
     border: solid;
-    height: 50vh;
+    height: 60vh;
     position: fixed;
     bottom: 6rem;
     right: 3rem;
-    z-index: 999;
-    width: 50%;
+    z-index: 900;
+    width: 70%;
     border-radius: 0.7rem;
     background-color: white;
     transition: all 0.3s linear;
@@ -61,18 +63,17 @@ export const StyledChat = styled.div`
   }
   .conversation-box {
     text-align: center;
-    padding: 1rem;
+    padding: 0.2rem;
   }
 
   .chat-inner-box {
     padding: 1rem;
-
     margin: 0 1rem 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 20vh;
     row-gap: 0.5em;
     margin-bottom: 2rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 15px 0px,
@@ -80,16 +81,16 @@ export const StyledChat = styled.div`
   }
 
   .hello-box {
-    padding-top: 0.5rem;
     background-color: #0a9396;
-    height: 10vh;
+    height: 7vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     h3,
     h4 {
       color: white;
-      padding: 0 1rem 0 1rem;
+      /* padding: 0 0.5rem 0 0.5rem; */
     }
   }
   button {
@@ -98,5 +99,22 @@ export const StyledChat = styled.div`
   p {
     text-align: center;
     font-weight: 400;
+  }
+
+  @media screen and (min-width: 900px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .conversation-box {
+      padding: 1em;
+    }
+
+    .chat-box {
+      height: 50vh;
+      /* bottom: 6rem; */
+      /* right: 3rem; */
+      width: 50%;
+    }
   }
 `;

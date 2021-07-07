@@ -19,7 +19,7 @@ export const StyledNavBar = styled.div`
     left: 0;
     height: 100%;
     background: #fff;
-    z-index: 100;
+    z-index: 901;
     padding: 1rem 0;
     font-size: 1.3rem;
     text-align: left;
@@ -40,7 +40,7 @@ export const StyledNavBar = styled.div`
       transform: translateX(0);
       box-shadow: 0px 10px 10px -15px #111;
       display: flex;
-      margin-top: 6rem;
+      margin-top: 85px;
       align-items: center;
       width: 100%;
       flex-direction: row;

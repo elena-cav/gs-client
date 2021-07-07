@@ -13,8 +13,8 @@ export const StyledHeader = styled.div`
   padding: 0 2rem;
   align-items: center;
   z-index: 2;
-  min-height: 7vh;
-  margin-top: 4vh;
+  height: 50px;
+  margin-top: 35px;
 
   @media screen and (min-width: 900px) {
     box-shadow: none;

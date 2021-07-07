@@ -5,7 +5,7 @@ export const StyledBar = styled.div`
 
   form {
     background-color: white;
-    height: 12vh;
+    height: 85px;
     width: 100%;
     z-index: 999;
     position: fixed;

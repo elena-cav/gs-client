@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as api from '../utils/api';
 import { Ring } from 'react-awesome-spinners';
+import { Link } from '@reach/router';
 import { StyledProducts } from '../styled/productslist';
 import ProductCard from './ProductCard';
 
@@ -50,6 +51,9 @@ class ProductsList extends Component {
       return (
         <div>
           <h2>We're sorry, there are no results matching your search</h2>
+          <Link to={'/'}>
+            <h3>Go back</h3>
+          </Link>
         </div>
       );
     return (
