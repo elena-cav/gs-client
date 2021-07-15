@@ -18,7 +18,6 @@ class ProductsList extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props, 'PROPS');
     if (this.props.keyword) {
       api
         .fetchProductsByKeyword(this.props.keyword)
@@ -70,6 +69,8 @@ class ProductsList extends Component {
           }) => {
             return (
               <ProductCard
+                setCount={this.props.setCount}
+                count={this.props.count}
                 product_name={product_name}
                 image_url={image_url}
                 sales_price={sales_price}

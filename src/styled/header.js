@@ -22,6 +22,32 @@ export const StyledHeader = styled.div`
     justify-content: center;
   }
 
+  .cart-icon {
+    width: 1.3rem;
+    color: #005f73;
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    right: 4.5rem;
+
+    @media screen and (min-width: 900px) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .count {
+    color: #005f73;
+    z-index: 2;
+    position: absolute;
+    right: 3.3rem;
+    font-size: 0.8rem;
+
+    @media screen and (min-width: 900px) {
+      top: 50%;
+      transform: translateY(-100%);
+    }
+  }
+
   h2 {
     font-weight: 400;
     margin: 0;

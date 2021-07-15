@@ -11,7 +11,9 @@ export default function ProductCard(props) {
     brand,
     discount_percentage,
     colors,
-    product_id
+    product_id,
+    setCount,
+    count
   } = props;
 
   const [bookmark, setBookmark] = useState(false);
@@ -54,6 +56,7 @@ export default function ProductCard(props) {
         <h3>{sales_price}</h3>
         <h3>{discount_percentage}</h3>
       </div>
+      <button onClick={() => setCount(count + 1)}>Add to cart</button>
     </StyledProduct>
   );
 }

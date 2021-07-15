@@ -38,4 +38,9 @@ export const StyledProduct = styled.div`
     margin: 0;
     padding: 0 0 0 0.5rem;
   }
+  button {
+    align-self: end;
+    transform: translateY(-70%);
+    cursor: pointer;
+  }
 `;
