@@ -25,7 +25,7 @@ export default function App() {
         <Header count={count} openMenu={openMenu} />
         <Router>
           <ProductsList count={count} setCount={setCount} path="/" />
-          <ProductsList path="/:keyword" />
+          <ProductsList path="/products/:keyword" />
           <ProductPage path="/product/:product_id" />
           <FaqPage path="/faq" />
         </Router>

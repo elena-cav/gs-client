@@ -11,15 +11,12 @@ export default function SearchBar() {
   console.log('sb', searchBar);
 
   const handleKeyPress = (event) => {
-    console.log(event.key, 'KEY');
     if (event.key === 'Enter') {
       handleSubmit(keyword);
     }
   };
   const handleSubmit = () => {
-    console.log('in here');
-    console.log(keyword, 'KEYWORD');
-    navigate(`/${keyword}`, { state: { keyword } });
+     navigate(`/products/${keyword}`, { state: { keyword } });
   };
   return (
     <StyledBar>
